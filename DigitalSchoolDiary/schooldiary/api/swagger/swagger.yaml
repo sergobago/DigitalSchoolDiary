@@ -1,0 +1,328 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: DigitalSchoolDiary
+  description: "Digital School Diary."
+  contact:
+        email: "sergobago1000k@mail.ru"
+# during dev, should point to your local machine
+host: localhost:3000
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /create_db_tables:
+      # binds a127 app logic to a route
+      x-swagger-router-controller: create_db_tables_controller
+      get:
+        description: Create db tables
+        # used as the method name of the controller
+        operationId: create_dbtables
+        responses:
+          "200":
+            description: Success
+            schema:
+              $ref: "#/definitions/CreateDBTablesResponse"
+          "404":
+            description: Not Found
+          default:
+            description: Error
+            schema:
+              $ref: "#/definitions/ErrorResponse"
+  /login:
+      # binds a127 app logic to a route
+      x-swagger-router-controller: login_controller
+      get:
+        description: Login
+        # used as the method name of the controller
+        operationId: do_login
+        parameters:
+          - name: username
+            in: query
+            description: this username
+            required: true
+            type: string
+          - name: password
+            in: query
+            description: this password
+            required: true
+            type: string
+        responses:
+          "200":
+            description: Success
+            schema:
+              $ref: "#/definitions/LoginResponse"
+          "400":
+            description: Bad Parametrs
+          "404":
+            description: Not Found
+          default:
+            description: Error
+            schema:
+              $ref: "#/definitions/ErrorResponse"
+  /getstudentclassmates:
+      # binds a127 app logic to a route
+      x-swagger-router-controller: get_student_classmates_controller
+      get:
+        description: student classmates
+        # used as the method name of the controller
+        operationId: get_studentclassmates
+        responses:
+          "200":
+            description: Success
+            schema:
+              $ref: "#/definitions/ClassmatesResponse"
+          "400":
+            description: Bad Parametrs
+          "404":
+            description: Not Found
+          default:
+            description: Error
+            schema:
+              $ref: "#/definitions/ErrorResponse"
+  /getuserdata:
+        # binds a127 app logic to a route
+        x-swagger-router-controller: userdata_controller
+        get:
+          description: userdata
+          # used as the method name of the controller
+          operationId: get_userdata
+          responses:
+            "200":
+              description: Success
+              schema:
+                $ref: "#/definitions/UserDataResponse"
+            "400":
+              description: Bad Parametrs
+            "404":
+              description: Not Found
+            default:
+              description: Error
+              schema:
+                $ref: "#/definitions/ErrorResponse"
+  /getteacherclasses:
+      # binds a127 app logic to a route
+      x-swagger-router-controller: get_teacher_classes_controller
+      get:
+        description: teacher classes
+        # used as the method name of the controller
+        operationId: get_teacherclasses
+        responses:
+          "200":
+            description: Success
+            schema:
+              $ref: "#/definitions/TeacherClassesResponse"
+          "400":
+            description: Bad Parametrs
+          "404":
+            description: Not Found
+          default:
+            description: Error
+            schema:
+              $ref: "#/definitions/ErrorResponse"
+  /getstudentrating:
+      # binds a127 app logic to a route
+      x-swagger-router-controller: get_student_rating_controller
+      get:
+        description: student rating
+        # used as the method name of the controller
+        operationId: get_studentrating
+        responses:
+          "200":
+            description: Success
+            schema:
+              $ref: "#/definitions/StudentRatingResponse"
+          "400":
+            description: Bad Parametrs
+          "404":
+            description: Not Found
+          default:
+            description: Error
+            schema:
+              $ref: "#/definitions/ErrorResponse"
+  /createmarks:
+      # binds a127 app logic to a route
+      x-swagger-router-controller: create_mark_controller
+      get:
+        description: create marks
+        # used as the method name of the controller
+        operationId: create_marks
+        responses:
+          "200":
+            description: Success
+            schema:
+              $ref: "#/definitions/CreateMarksResponse"
+          "400":
+            description: Bad Parametrs
+          "404":
+            description: Not Found
+          default:
+            description: Error
+            schema:
+              $ref: "#/definitions/ErrorResponse"
+  /getteacherstudentsmarks:
+      # binds a127 app logic to a route
+      x-swagger-router-controller: get_teacher_students_marks_controller
+      get:
+        description: teacher students marks
+        # used as the method name of the controller
+        operationId: get_teacherstudentsmarks
+        parameters:
+          - name: teacherid
+            in: query
+            description: this teacher id
+            required: true
+            type: string
+          - name: subjectid
+            in: query
+            description: this subject id
+            required: true
+            type: string
+          - name: classid
+            in: query
+            description: this class id
+            required: true
+            type: string
+        responses:
+          "200":
+            description: Success
+            schema:
+              $ref: "#/definitions/TeacherStudentsMarksResponse"
+          "400":
+            description: Bad Parametrs
+          "404":
+            description: Not Found
+          default:
+            description: Error
+            schema:
+              $ref: "#/definitions/ErrorResponse"
+  /addstudentmark:
+      # binds a127 app logic to a route
+      x-swagger-router-controller: add_student_mark_controller
+      get:
+        description: add student mark
+        # used as the method name of the controller
+        operationId: add_studentmark
+        parameters:
+          - name: teacherid
+            in: query
+            description: this teacher id
+            required: true
+            type: string
+          - name: subjectid
+            in: query
+            description: this subject id
+            required: true
+            type: string
+          - name: classid
+            in: query
+            description: this class id
+            required: true
+            type: string
+          - name: code
+            in: query
+            description: this code
+            required: true
+            type: string
+          - name: mark
+            in: query
+            description: this mark
+            required: true
+            type: string
+          - name: pdate
+            in: query
+            description: this date
+            required: true
+            type: string
+          - name: student
+            in: query
+            description: this student id added
+            required: true
+            type: string
+        responses:
+          "200":
+            description: Success
+            schema:
+              $ref: "#/definitions/AddStudentsMarkResponse"
+          "400":
+            description: Bad Parametrs
+          "404":
+            description: Not Found
+          default:
+            description: Error
+            schema:
+              $ref: "#/definitions/ErrorResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  AddStudentsMarkResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  TeacherStudentsMarksResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  CreateMarksResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  StudentRatingResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  TeacherClassesResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  ClassmatesResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  UserDataResponse:
+      required:
+        - message
+      properties:
+        message:
+          type: string
+  LoginResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  CreateDBTablesResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string

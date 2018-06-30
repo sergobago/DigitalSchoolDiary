@@ -1,0 +1,47 @@
+{
+  "options": {
+    "serverSettings":{
+      "host": "localhost",
+      "port": 3000
+    },
+    "winstonSettings": {
+      "consoleInfo":{
+        "level": "info"
+      },
+      "fileInfo":{
+        "name": "datalog",
+        "filename": "logfiles/datalog.log",
+        "level": "info"
+      },
+      "fileError":{
+        "name": "errorlog",
+        "filename": "logfiles/errorlog.log",
+        "level": "error"
+      }
+    },
+    "genSalt":{
+      "password": 10
+    },
+    "sequelize":{
+      "bd": "schooldiary",
+      "login": "pro",
+      "password": "199405",
+      "params": {
+        "host": "skinbuy.ru",
+        "port": 5432,
+        "dialect": "postgres",
+        "operatorsAliases": false,
+        "logging": false,
+        "pool": {
+          "max": 100,
+          "min": 0,
+          "acquire": 30000,
+          "idle": 10000
+        }
+      }
+    },
+    "jwt":{
+      "secret": "he761ge7gdags316egd613efvads6513evasd6731"
+    }
+  }
+}
