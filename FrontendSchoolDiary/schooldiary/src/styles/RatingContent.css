@@ -1,0 +1,57 @@
+.RatingContent-div-main{
+    width:100%;
+    height:auto;
+}
+
+.RatingContent-td-subject{
+    border:1px solid black;
+    font-weight: bold;
+    width: 200px;
+    padding: 10px 20px;
+    position: fixed;
+    background-color: #1bd455;
+}
+
+.RatingContent-div-main-rating{
+    width:80%;
+    height:auto;
+    text-align: center;
+    position: absolute;
+    overflow-x: auto;
+}
+
+.RatingContent-div-rating{
+    width:auto;
+    height:auto;
+    margin: 40px 0;
+    display: inline-block;
+}
+
+.RatingContent-table-rating{
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.RatingContent-tr-rating{
+
+}
+
+.RatingContent-td-rating{
+    border:1px solid black;
+    padding: 10px;
+}
+
+.RatingContent-td-start{
+    border:1px solid black;
+    padding: 10px 20px;
+}
+
+.RatingContent-div-start{
+    width: 200px;
+}
+
+.RatingContent-td-mark{
+    border:1px solid black;
+    padding: 10px 20px;
+    text-align: center;
+}

@@ -1,0 +1,35 @@
+.ClassesContent-div-main{
+    width:100%;
+    height:auto;
+}
+
+.ClassesContent-div-main-classes{
+    width:100%;
+    height:auto;
+    text-align: center;
+}
+
+.ClassesContent-div-classes{
+    width:auto;
+    height:auto;
+    margin: 40px 0;
+    display: inline-block;
+}
+
+.ClassesContent-table-classes{
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.ClassesContent-tr-classes{
+    border:1px solid black;
+    cursor: pointer;
+}
+
+.ClassesContent-tr-classes:hover{
+    background-color: #eaeaea;
+}
+
+.ClassesContent-td-classes{
+    padding: 20px 240px;
+}

@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.Template-main-block {
+    margin-top:1px;
+    width:100%;
+    height: auto;
+}
+
+.Template-body-block{
+    display: table;
+    width:100%;
+    min-height: 580px;
+}
+
+.Template-content-block{
+    display: table-cell;
+    width: auto;
+    height: auto;
+}
+
+.Template-body-clear{
+    clear:both;
+}

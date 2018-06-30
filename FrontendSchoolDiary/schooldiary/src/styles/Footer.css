@@ -1,0 +1,25 @@
+.Footer-main-block{
+    width:100%;
+    height:40px;
+    text-align:center;
+    margin-top: 1px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    background-color: #fafafa;
+}
+
+.Footer-author-block{
+    width:auto;
+    height:40px;
+    display: inline-block;
+    line-height:40px;
+    text-align:center;
+}
+
+.Footer-author-text{
+    color:black;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
