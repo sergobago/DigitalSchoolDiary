@@ -1,0 +1,32 @@
+.LoginContent-div-main{
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+
+.LoginContent-div-form{
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    padding: 60px;
+}
+
+.LoginContent-div-server-error{
+    background-color: red;
+    color:white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.LoginContent-h1-form-title{
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.LoginContent-div-form-login{
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+}

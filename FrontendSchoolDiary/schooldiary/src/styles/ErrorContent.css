@@ -1,0 +1,10 @@
+.ErrorContent-div-main{
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+
+.ErrorContent-message{
+    padding: 100px 0;
+    font-size:100px;
+}

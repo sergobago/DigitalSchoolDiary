@@ -1,0 +1,44 @@
+.ClassmatesContent-div-main{
+    width:100%;
+    height:auto;
+}
+
+.ClassmatesContent-div-main-classmates{
+    width:100%;
+    height:auto;
+    text-align: center;
+}
+
+.ClassmatesContent-div-classmates{
+    width:auto;
+    height:auto;
+    margin: 40px 0;
+    display: inline-block;
+}
+
+.ClassmatesContent-table-classmates{
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.ClassmatesContent-tr-classmates{
+    border:1px solid black;
+    cursor: pointer;
+}
+
+.ClassmatesContent-tr-classmates:hover{
+    background-color: #eaeaea;
+}
+
+.ClassmatesContent-td-classmates{
+     padding: 10px;
+}
+
+.ClassmatesContent-img-classmates{
+    height: 36px;
+    width: auto;
+}
+
+.ClassmatesContent-td-classmates-phone{
+    padding-left: 90px;
+}
