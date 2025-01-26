@@ -4,7 +4,7 @@
   "private": true,
   "description": "Swagger DigitalSchoolDiary",
   "keywords": [],
-  "author": "Sergey Gorbachev",
+  "author": "Sergey",
   "license": "MIT",
   "main": "app.js",
   "dependencies": {
